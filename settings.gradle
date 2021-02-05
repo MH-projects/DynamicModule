@@ -1,1 +1,2 @@
-include ':app', ':dynamic-module'
+include ':custom_form'
+include ':app', ':dynamic_module'

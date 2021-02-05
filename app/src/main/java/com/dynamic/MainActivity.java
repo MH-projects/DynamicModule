@@ -61,7 +61,8 @@ public class MainActivity extends AppCompatActivity {
         SplitInstallRequest request =
                 SplitInstallRequest
                         .newBuilder()
-                        .addModule("dynamic-module")
+                        //.addModule("dynamic_module")
+                        .addModule("com.github.MH-projects:DynamicRelease:1.0.4")
                         .build();
 
         SplitInstallStateUpdatedListener listener = new SplitInstallStateUpdatedListener() {
@@ -93,5 +94,16 @@ public class MainActivity extends AppCompatActivity {
                         mySessionId = sessionId;
                     }
                 });
+    }
+
+    public void downloadForm(View view) {
+    }
+
+    public void startForm(View view) {
+
+        Intent intent = new Intent();
+        intent.setClassName("com.dynamic", "com.mh.custom_form.ActForm");
+        startActivity(intent);
+
     }
 }
